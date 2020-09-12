@@ -12,8 +12,8 @@ export default function BlogPost({ data }) {
     <Layout>
       <div>
         <h1>{post.title}</h1>
-        <div id="#post-content">{z(post.content)}</div>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        {/* <div id="#post-content">{z(post.content)}</div> */}
+        <div dangerouslySetInnerHTML={{ __html: z(post.content) }} />
       </div>
     </Layout>
   )
@@ -60,7 +60,6 @@ export const query = graphql`
         }
         slug
       }
-      totalCount
     }
   }
 `
