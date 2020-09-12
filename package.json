@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "keith-ratner-live-gatsby-site",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Gatsby front-end to KeithRatner.live",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -15,6 +15,11 @@
   },
   "dependencies": {
     "gatsby": "^2.24.50",
+    "gatsby-plugin-sharp": "^2.6.31",
+    "gatsby-source-graphql": "^2.7.2",
+    "gatsby-source-wordpress": "^3.3.32",
+    "gatsby-source-wordpress-experimental": "^1.3.8",
+    "gatsby-transformer-sharp": "^2.5.14",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
