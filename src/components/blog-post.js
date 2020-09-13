@@ -11,7 +11,7 @@ export default function BlogPost({ data }) {
   return (
     <Layout>
       <div>
-        <h1>{post.title}</h1>
+        <h2>{post.title}</h2>
         {/* <div id="#post-content">{z(post.content)}</div> */}
         <div dangerouslySetInnerHTML={{ __html: z(post.content) }} />
         <div>
