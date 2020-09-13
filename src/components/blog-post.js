@@ -14,6 +14,12 @@ export default function BlogPost({ data }) {
         <h1>{post.title}</h1>
         {/* <div id="#post-content">{z(post.content)}</div> */}
         <div dangerouslySetInnerHTML={{ __html: z(post.content) }} />
+        <div>
+          <img
+            alt={post.featuredImage.node.description}
+            src={"/" + post.featuredImage.node.localFile.relativePath}
+          />
+        </div>
       </div>
     </Layout>
   )
@@ -59,6 +65,18 @@ export const query = graphql`
           splashlinktitle
         }
         slug
+        featuredImage {
+          node {
+            localFile {
+              relativePath
+              relativeDirectory
+              root
+              url
+              base
+            }
+            slug
+          }
+        }
       }
     }
   }

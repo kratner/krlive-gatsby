@@ -149,6 +149,17 @@ exports.createPages = async ({ graphql, actions }) => {
           splashlinktitle
         }
         slug
+        featuredImage {
+          node {
+            localFile {
+              relativePath
+              relativeDirectory
+              root
+              url
+              base
+            }
+          }
+        }
       }
     }
   `)
