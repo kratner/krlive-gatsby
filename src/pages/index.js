@@ -1,11 +1,29 @@
 import React from "react"
 import Layout from "../components/layout"
 
-export default function Home({ data }) {
-  return (
-    <Layout>
-      <h2>Data:</h2>
-      <pre>{JSON.stringify(data)}</pre>
-    </Layout>
-  )
+const Home = () => {
+  return <Layout />
 }
+
+/*
+
+export const query = graphql`
+  query indexHome {
+    qryArtwork: allWpPost(
+      filter: {
+        categories: { nodes: { elemMatch: { slug: { eq: "artwork" } } } }
+      }
+    ) {
+      totalCount
+      edges {
+        node {
+          title
+          slug
+        }
+      }
+    }
+  }
+`
+*/
+
+export default Home

@@ -7,7 +7,7 @@
 // In your gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: "KeithRatner.Live Gatsby Site",
+    title: "Keith Ratner dot Live",
   },
   plugins: [
     /*
