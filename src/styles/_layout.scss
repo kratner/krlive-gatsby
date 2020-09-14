@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  .page {
+    .nav,
+    .content {
+      float: left;
+    }
+  }
+  .nav {
+    ul {
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+    }
+  }
+}

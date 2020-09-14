@@ -10,6 +10,7 @@ module.exports = {
     title: "Keith Ratner dot Live",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     /*
     // Simple config, passing URL
     {

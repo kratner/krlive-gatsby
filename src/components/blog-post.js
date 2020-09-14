@@ -10,7 +10,7 @@ export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
   return (
     <Layout>
-      <div>
+      <React.Fragment>
         <h1>{post.title}</h1>
         {/* <div id="#post-content">{z(post.content)}</div> */}
         <div dangerouslySetInnerHTML={{ __html: z(post.content) }} />
@@ -20,7 +20,7 @@ export default function BlogPost({ data }) {
             src={"/" + post.featuredImage.node.localFile.relativePath}
           />
         </div>
-      </div>
+      </React.Fragment>
     </Layout>
   )
 }
