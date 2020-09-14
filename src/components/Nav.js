@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
+import { withPrefix } from "gatsby"
 //import { addChar } from "../utils/adapters"
 
 const Nav = () => {
@@ -15,7 +16,7 @@ const Nav = () => {
                 {menuItems.map(menuItem => (
                   <li>
                     <Link
-                      to={`${menuItem.node.slug}/`}
+                      to={withPrefix(`/${menuItem.node.slug}/`)}
                       activeStyle={{
                         textDecoration: "salmon double underline",
                       }}
