@@ -1,5 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
+//import { addChar } from "../utils/adapters"
 
 const Nav = () => {
   return (
@@ -9,13 +10,22 @@ const Nav = () => {
         if (data.allWpPost.edges) {
           const menuItems = data.allWpPost.edges
           return (
-            <ul>
-              {menuItems.map(menuItem => (
-                <li>
-                  <a href={menuItem.node.slug}>{menuItem.node.title}</a>
-                </li>
-              ))}
-            </ul>
+            <React.Fragment>
+              <ul>
+                {menuItems.map(menuItem => (
+                  <li>
+                    <Link
+                      to={`${menuItem.node.slug}/`}
+                      activeStyle={{
+                        textDecoration: "salmon double underline",
+                      }}
+                    >
+                      {menuItem.node.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </React.Fragment>
           )
         }
         return null
